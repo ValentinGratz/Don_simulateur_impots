@@ -8,4 +8,7 @@ J'ai réussi à fecréer un petit simulateur en fonction des informations de dé
 - Organisme d'intérêt général ou reconnu d'utilité publique : 66%
 - Organisme d'aide aux personnes en difficulté (repas, soins, logement) jusque 1000€ : 75%
 
+Lien de la page : https://valentingratz.github.io/Don_simulateur_impots/simulateur_don_IFI.html
+
+
 Ce formulaire à été généré par ChatGPT. 
