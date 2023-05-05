@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simulation de don financier</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      button {
+        background-color: #008CBA;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #00557D;
+      }
+      #result {
+        margin-top: 30px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simulation de don financier</h1>
+      <form>
+        <label for="don">Montant du don:</label>
+        <input type="number" id="don" name="don" placeholder="Entrez le montant du don en euros">
+        <label for="organisme">Organisme bénéficiaire:</label>
+        <select id="organisme" name="organisme">
+          <option value="66">Organisme d'intérêt général ou reconnu d'utilité publique (66%)</option>
+          <option value="75">Organisme d'aide aux personnes en difficulté (repas, soins, logement) jusqu'à 1000€ (75%)</option>
+        </select>
+        <button type="button" onclick="calculer()">Calculer</button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <script>
+      function calculer() {
+        var don = document.getElementById("don").value;
+        var organisme = document.getElementById("organisme").value;
+        var reduction = don * organisme / 100;
+        var resultat = "Votre don de " + don + " euros vous donne droit à une réduction d'impôt de " + reduction + " euros.";
+        document.getElementById("result").innerHTML = resultat;
+      }
+    </script>
+  </body>
+</html>
